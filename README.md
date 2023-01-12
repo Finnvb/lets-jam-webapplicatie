@@ -1,4 +1,4 @@
-# Cocktail recipe 🍸
+# Cocktail recipes 🍸
 Dit is een site waarmee je cocktailrecepten kunt opzoeken met instructies hoe je ze zelf kunt maken.
 
 ## Inhoudsopgave
