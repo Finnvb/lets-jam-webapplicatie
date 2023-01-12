@@ -1,9 +1,5 @@
-> _Fork_ deze leertaak en ga aan de slag. 
-Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. 
-De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Cocktail recipe
+Dit is een site waarmee je cocktailrecepten kunt opzoeken met instructies hoe je ze zelf kunt maken.
 
 ## Inhoudsopgave
 
