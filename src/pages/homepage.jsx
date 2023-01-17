@@ -5,6 +5,9 @@ import search from "../assets/search.svg";
 import random from "../assets/random.svg";
 import az from "../assets/az.svg";
 import category from "../assets/category.svg";
+import randomize from "../assets/randomize.png";
+import testafbeelding from "../assets/afbeelding.png";
+
 import "./Homepage.css";
 
 import Button from "../components/test";
@@ -21,15 +24,39 @@ function Homepage() {
       <h1>Find out how to make your favorite cocktails!</h1>
 
       <div className="searchOptions">
-        <SearchOption link="#name"  source={search} text="Search"></SearchOption>
-        <SearchOption link="#random" source={random} text="Random"></SearchOption>
-        <SearchOption link="#browse" source={az} text="Browse AZ"></SearchOption>
-        <SearchOption  source={category} text="Category"></SearchOption>
+        <SearchOption link="#name" source={search} text="Search"></SearchOption>
+        <SearchOption
+          link="#random"
+          source={random}
+          text="Random"
+        ></SearchOption>
+        <SearchOption
+          link="#browse"
+          source={az}
+          text="Browse AZ"
+        ></SearchOption>
+        <SearchOption source={category} text="Category"></SearchOption>
       </div>
 
-      <Section id="name" title="Search by name"></Section>
+      <Section id="name" title="Search by name">
+        <div className="searchbar">
+          <input type="text" />
+          <button className="button">Search</button>
+        </div>
+      </Section>
 
-      <Section id="random" title="Random cocktail"></Section>
+      <Section id="random" title="Random cocktail">
+        <div className="container">
+          <button className="randomize">
+            <img src={randomize} alt="Randomize" />
+            <p>Randomize</p>
+          </button>
+<div className="center">
+          <img className="cocktail-image" src={testafbeelding} alt="cocktail" />
+          <p>Cocktail</p>
+          </div>
+        </div>
+      </Section>
 
       <Section id="browse" title="Browse by first letter"></Section>
 

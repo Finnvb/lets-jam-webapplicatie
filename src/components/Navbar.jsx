@@ -11,7 +11,7 @@ function Navbar() {
       </a>
  
 
-      <button>Log in</button>
+      <button className={styles.button}>Log in</button>
     </nav>
   );
 }
