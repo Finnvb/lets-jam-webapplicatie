@@ -23,7 +23,7 @@ function Homepage() {
       <div className="searchOptions">
         <SearchOption link="#name"  source={search} text="Search"></SearchOption>
         <SearchOption link="#random" source={random} text="Random"></SearchOption>
-        <SearchOption link="#browse" link="#browse" source={az} text="Browse AZ"></SearchOption>
+        <SearchOption link="#browse" source={az} text="Browse AZ"></SearchOption>
         <SearchOption  source={category} text="Category"></SearchOption>
       </div>
 
