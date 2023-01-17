@@ -1,0 +1,27 @@
+
+footer {
+    background-color:#002935;
+    /* height: 15rem; */
+    /* position: absolute; */
+    /* top: 0; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.logo {
+    /* width: 10rem; */
+   /* margin-top: 1rem; */
+margin-left: 1rem;
+}
+
+
+
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+

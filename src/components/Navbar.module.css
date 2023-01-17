@@ -1,0 +1,31 @@
+nav {
+    /* background-color: aqua; */
+    /* height: 15rem; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+
+.logo {
+    /* width: 10rem; */
+   /* margin-top: 1rem; */
+margin-left: 1rem;
+}
+
+button {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: #1E5A6E;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+button:hover{
+    cursor: pointer;
+}
