@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 
 import HomePage from "./pages/homepage";
+import Test from "./pages/test";
 // import OverviewPage from "./pages/Overview";
 // import UidPage from "./pages/Uid";
 
@@ -23,6 +24,7 @@ function App() {
     <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/overview" element={<HomePage />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
  </div>
  </Router>
