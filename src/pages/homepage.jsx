@@ -21,15 +21,15 @@ function Homepage() {
       <h1>Find out how to make your favorite cocktails!</h1>
 
       <div className="searchOptions">
-        <SearchOption id="search" source={search} text="Search"></SearchOption>
-        <SearchOption source={random} text="Random"></SearchOption>
-        <SearchOption source={az} text="Browse AZ"></SearchOption>
+        <SearchOption link="#name"  source={search} text="Search"></SearchOption>
+        <SearchOption link="#random" source={random} text="Random"></SearchOption>
+        <SearchOption link="#browse" link="#browse" source={az} text="Browse AZ"></SearchOption>
         <SearchOption  source={category} text="Category"></SearchOption>
       </div>
 
-      <Section title="Search by name"></Section>
+      <Section id="name" title="Search by name"></Section>
 
-      <Section title="Random cocktail"></Section>
+      <Section id="random" title="Random cocktail"></Section>
 
       <Section id="browse" title="Browse by first letter"></Section>
 
