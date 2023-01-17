@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 
 import HomePage from "./pages/homepage";
-import Test from "./pages/test";
+import Test from "./pages/Test";
 // import OverviewPage from "./pages/Overview";
 // import UidPage from "./pages/Uid";
 
