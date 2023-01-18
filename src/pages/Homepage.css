@@ -53,7 +53,10 @@ object-fit: cover;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+height: 15rem;
+width: 15rem;
 }
+
 input{
   width: 20rem;
   height: 2rem;
