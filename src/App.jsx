@@ -7,7 +7,7 @@ import UidPage from "./pages/Uid";
 
 function App() {
   return (
-    <Router>
+    // <Router>
  <div>
     {/* <Switch>
       <Route path='/' exact>
@@ -30,7 +30,7 @@ function App() {
       
       </Routes>
  </div>
- </Router>
+//  </Router>
   );
 }
 
