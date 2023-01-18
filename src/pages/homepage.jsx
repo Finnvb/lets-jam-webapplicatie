@@ -63,6 +63,7 @@ export default function Homepage() {
 
 
 
+
    useEffect(() => {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
       .then((response) => {
@@ -128,7 +129,7 @@ export default function Homepage() {
           {/* <p>Cocktail</p> */}
           {data &&
           data.drinks.map(({ idDrink, strDrink, strDrinkThumb}) => (
-            <a href="/">
+            <a href={idDrink}>
             <div className="center" key={idDrink}>
               {/* <h3>{strDrink}</h3> */}
               <img className="cocktail-image" key={idDrink} src={strDrinkThumb} alt={strDrink} />
