@@ -1,0 +1,16 @@
+.overview-title{
+    margin-top: 10rem;
+}
+
+.cocktail-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.cocktail-image-overview{
+    width: 15rem;
+}

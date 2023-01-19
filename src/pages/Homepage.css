@@ -90,3 +90,20 @@ p{
   width: 10rem;
   
 }
+
+
+
+.alphabet{
+  display: flex;
+
+}
+
+.alphabet li{
+  list-style: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.alphabet a:hover{
+  color: #1E5A6E;
+}
