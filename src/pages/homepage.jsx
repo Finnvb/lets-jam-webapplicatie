@@ -21,28 +21,10 @@ import { useState, useEffect } from "react";
 export default function Homepage() {
 
   const [data, setData] = useState(null);
+  const [data1, setData1] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
  
-
-  // function Randomize(){
-  //   useEffect(() => {
-  //     fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
-  //       .then((response) => {
-  //         if (!response.ok) {
-  //           throw new Error(
-  //             `This is an HTTP error: The status is ${response.status}`
-  //           );
-  //         }
-  //         return response.json();
-  //       })
-  //       .then((actualData) => {setData(actualData);
-  //       console.log(actualData)})
-  //       .catch((err) => {
-  //         console.log(err.message);
-  //       });
-  //   }, []);
-  // }
 
   const randomize = ()=> {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
@@ -96,25 +78,25 @@ let userValue ='';
 
   
   
-  // const clickButton = ()=> {
+  const clickButton = ()=> {
 
 
-  //   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${userValue}`)
-  //   .then((response) => {
-  //     if (!response.ok) {
-  //       throw new Error(
-  //         `This is an HTTP error: The status is ${response.status}`
-  //       );
-  //     }
-  //     return response.json();
-  //   })
-  //   .then((actualData) => {setData(actualData);
-  //   console.log(actualData)})
-  //   .catch((err) => {
-  //     setError(err.message);
-  //     console.log(err.message);
-  //   });
-  // }
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${userValue}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(
+          `This is an HTTP error: The status is ${response.status}`
+        );
+      }
+      return response.json();
+    })
+    .then((actualData1) => {setData1(actualData1);
+    console.log(actualData1)})
+    .catch((err) => {
+      setError(err.message);
+      console.log(err.message);
+    });
+  }
 
 
   return (
@@ -145,11 +127,23 @@ let userValue ='';
 
       <Section id="name" title="Search by name">
         <div className="searchbar">
-          <input type="text" placeholder="Search"  />
-          <button className="button" >Search</button>
+          <input type="text" placeholder="Search" onChange={getInputValue}  />
+          <button className="button" onClick={clickButton} >Search</button>
         </div>
 
-        
+        <div className="search-container">
+         
+         {data1 &&
+         data1.drinks.map(({ idDrink, strDrink, strDrinkThumb}) => (
+           <a href={idDrink}>
+           <div className="search-item" key={idDrink}>
+             <img  key={idDrink} src={strDrinkThumb} alt={strDrink} />
+             <p>{strDrink}</p>
+           </div>
+           </a>
+         ))}
+         </div>
+
       </Section>
 
       <Section id="random" title="Random drink">
@@ -166,7 +160,6 @@ let userValue ='';
           data.drinks.map(({ idDrink, strDrink, strDrinkThumb}) => (
             <a href={idDrink}>
             <div className="center" key={idDrink}>
-              {/* <h3>{strDrink}</h3> */}
               <img className="cocktail-image-random" key={idDrink} src={strDrinkThumb} alt={strDrink} />
               <p>{strDrink}</p>
             </div>
@@ -213,7 +206,7 @@ let userValue ='';
 
       </Section>
 
-
+      
       <Section  id="category" title="Filter by category">
 
 <div className="category-container">
