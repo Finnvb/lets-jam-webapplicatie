@@ -25,6 +25,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/overview" element={<OverviewPage />} />
         <Route path="/overview/:uid" element={<OverviewPage />} />
+        <Route path="/overview/category/:uid" element={<OverviewPage />} />
+        <Route path="/overview/category/id/:uid" element={<UidPage />} />
         <Route path="/overview/id/:uid" element={<UidPage />} />
         <Route path='/:uid' element={<UidPage />}/>
       

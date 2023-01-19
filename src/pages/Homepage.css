@@ -107,3 +107,30 @@ p{
 .alphabet a:hover{
   color: #1E5A6E;
 }
+
+.category-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  width: 40%;
+  gap: 2rem;
+}
+
+.category{
+width: 6rem;
+height: 6rem;
+border-radius: 1rem;
+padding: 1.5rem;
+background-color: #1E5A6E;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #FFFFFF;
+transition: 0.5s;
+}
+
+.category:hover{
+  transform: scale(1.1);
+}

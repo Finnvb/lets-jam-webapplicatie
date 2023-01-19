@@ -106,7 +106,7 @@ export default function Homepage() {
           source={az}
           text="Browse AZ"
         ></SearchOption>
-        <SearchOption source={category} text="Category"></SearchOption>
+        <SearchOption link="#category" source={category} text="Category"></SearchOption>
       </div>
 
       <Section id="name" title="Search by name">
@@ -176,6 +176,25 @@ export default function Homepage() {
 </ul>
 
       </Section>
+
+
+      <Section  id="category" title="Filter by category">
+
+<div className="category-container">
+        <a className="category" href="overview/category/Alcoholic">Alcoholic</a>
+        <a className="category" href="overview/category/Non_Alcoholic">non-alcoholic</a>
+
+         <a className="category"  href="overview/category/Cocktail">Cocktail</a>
+         <a className="category" href="overview/category/Beer">Beer</a>
+         <a className="category" href="overview/category/Shot">Shot</a>
+         <a className="category" href="overview/category/Cocoa">Cocoa</a>
+
+        <a className="category" href="overview/category/Soft Drink">Soft drink</a>
+        <a className="category" href="overview/category/Shake">Shake</a>
+
+        </div>
+
+</Section>
 
       <Footer />
 

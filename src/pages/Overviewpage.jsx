@@ -33,9 +33,48 @@ export default function Uidpage() {
       });
   }, []);
 
+  useEffect(() => {
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${uid}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            `This is an HTTP error: The status is ${response.status}`
+          );
+        }
+        return response.json();
+      })
+      .then((actualData) => {
+        setData(actualData);
+        console.log(actualData);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+
+  useEffect(() => {
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${uid}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            `This is an HTTP error: The status is ${response.status}`
+          );
+        }
+        return response.json();
+      })
+      .then((actualData) => {
+        setData(actualData);
+        console.log(actualData);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
   return (
     <main>
-        <h1 className="overview-title">Browse all cocktails</h1>
+        <h1 className="overview-title">Browse all drinks <br/> {uid}</h1>
       <Navbar/>
       <div className="cocktail-container">
       {data &&
