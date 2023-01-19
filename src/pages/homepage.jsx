@@ -57,6 +57,7 @@ export default function Homepage() {
     .then((actualData) => {setData(actualData);
     console.log(actualData)})
     .catch((err) => {
+      setError(err.message);
       console.log(err.message);
     });
   }
@@ -81,6 +82,39 @@ export default function Homepage() {
       });
   }, []);
 
+
+let userValue ='';
+  const getInputValue = (event)=>{
+  
+     userValue = event.target.value;
+
+    console.log(userValue);
+
+};
+
+
+
+  
+  
+  // const clickButton = ()=> {
+
+
+  //   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${userValue}`)
+  //   .then((response) => {
+  //     if (!response.ok) {
+  //       throw new Error(
+  //         `This is an HTTP error: The status is ${response.status}`
+  //       );
+  //     }
+  //     return response.json();
+  //   })
+  //   .then((actualData) => {setData(actualData);
+  //   console.log(actualData)})
+  //   .catch((err) => {
+  //     setError(err.message);
+  //     console.log(err.message);
+  //   });
+  // }
 
 
   return (
@@ -111,12 +145,14 @@ export default function Homepage() {
 
       <Section id="name" title="Search by name">
         <div className="searchbar">
-          <input type="text" />
-          <button className="button">Search</button>
+          <input type="text" placeholder="Search"  />
+          <button className="button" >Search</button>
         </div>
+
+        
       </Section>
 
-      <Section id="random" title="Random cocktail">
+      <Section id="random" title="Random drink">
         <div className="container">
           <button onClick={randomize} className="randomize">
             <img  src={randomizeImg} alt="Randomize" />
@@ -125,8 +161,7 @@ export default function Homepage() {
 
 
 <div className="center">
-          {/* <img className="cocktail-image" src={testafbeelding} alt="cocktail" /> */}
-          {/* <p>Cocktail</p> */}
+         
           {data &&
           data.drinks.map(({ idDrink, strDrink, strDrinkThumb}) => (
             <a href={idDrink}>
@@ -140,6 +175,7 @@ export default function Homepage() {
           </div>
 
 
+        
 
         </div>
       </Section>
