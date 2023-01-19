@@ -91,7 +91,7 @@ export default function Homepage() {
 
       <Navbar />
       <img src={background} className="background-img" alt="background" />
-      <h1>Find out how to make your favorite cocktails!</h1>
+      <h1 className="header">Find out how to make your favorite cocktails!</h1>
 
   
       <div className="searchOptions">
@@ -132,7 +132,7 @@ export default function Homepage() {
             <a href={idDrink}>
             <div className="center" key={idDrink}>
               {/* <h3>{strDrink}</h3> */}
-              <img className="cocktail-image" key={idDrink} src={strDrinkThumb} alt={strDrink} />
+              <img className="cocktail-image-random" key={idDrink} src={strDrinkThumb} alt={strDrink} />
               <p>{strDrink}</p>
             </div>
             </a>
