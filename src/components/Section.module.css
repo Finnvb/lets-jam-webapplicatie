@@ -13,3 +13,9 @@ h2{
     text-align: center;
     /* margin-top: 1rem; */
 }
+
+@media (max-width:40rem){
+    .section{
+        height: 30rem;
+    }
+}

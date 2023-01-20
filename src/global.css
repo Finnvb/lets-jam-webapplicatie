@@ -13,6 +13,7 @@
   box-sizing: border-box;
   font-family: 'montserrat', 'sans-serif';
   color: var(--white);
+  scroll-behavior: smooth;
 }
 
 body {

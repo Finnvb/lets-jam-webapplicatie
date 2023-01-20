@@ -6,11 +6,11 @@ import random from "../assets/random.svg";
 import az from "../assets/az.svg";
 import category from "../assets/category.svg";
 import randomizeImg from "../assets/randomize.png";
-import testafbeelding from "../assets/afbeelding.png";
+import loadingCocktail from "../assets/loading.svg";
 
 import "./Homepage.css";
 
-import Button from "../components/test";
+
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
 import Footer from "../components/Footer";
@@ -137,7 +137,7 @@ let userValue ='';
          data1.drinks.map(({ idDrink, strDrink, strDrinkThumb}) => (
            <a href={idDrink}>
            <div className="search-item" key={idDrink}>
-             <img  key={idDrink} src={strDrinkThumb} alt={strDrink} />
+             <img className="search-item-img"  key={idDrink} src={strDrinkThumb} alt={strDrink} />
              <p>{strDrink}</p>
            </div>
            </a>
@@ -149,11 +149,13 @@ let userValue ='';
       <Section id="random" title="Random drink">
         <div className="container">
           <button onClick={randomize} className="randomize">
-            <img  src={randomizeImg} alt="Randomize" />
+            
+            <img className="random-img"  src={randomizeImg} alt="Randomize" />
+            
             <p>Randomize</p>
           </button>
 
-
+          {/* <img className="loading" src={loadingCocktail} alt="loading-cocktail" /> */}
 <div className="center">
          
           {data &&

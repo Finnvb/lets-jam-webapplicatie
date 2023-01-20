@@ -6,7 +6,7 @@ function SearchOption(props) {
   return (
  <a href={props.link} >
     <div className={styles.box}>
-        <img src={props.source} alt="img" />
+        <img className={styles.searchImg} src={props.source} alt="img" />
         <h2>{props.text}</h2>
     </div>
     </a>
