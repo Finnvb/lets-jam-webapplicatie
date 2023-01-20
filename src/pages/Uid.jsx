@@ -76,7 +76,7 @@ export default function Uidpage() {
               />
               <div className="info">
                 <div>
-                  <h2>category</h2>
+                  <h2>Category</h2>
                   <p>
                     {strAlcoholic}<br/> {strCategory}
                   </p>
