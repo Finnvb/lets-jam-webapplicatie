@@ -34,6 +34,7 @@ Dit project is gemaakt met React, Vite en een API. Hieronder een lijst van alle 
 - ⚡ Vite
 - 🧁 CSS
 - 🦾 Javascript
+- 🍸 TheCocktailDB API
 
 ## Installatie
 
