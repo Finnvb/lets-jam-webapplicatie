@@ -1,61 +1,60 @@
-
-.nav{
+.nav {
     height: 4rem;
     display: flex;
-justify-content: center;  
+    justify-content: center;
 }
 
-.drink-container{
-    /* height: 25rem; */
- /* margin-top: 5rem; */
- display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 60rem;
-gap: 1.5rem;
-background-color: #001C24;
-line-height: 1.5;
+.drink-container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 60rem;
+    gap: 1.5rem;
+    background-color: #001C24;
+    line-height: 1.5;
 
 
 }
 
 
 
-h1{
+h1 {
     font-size: 3rem;
-  
+
 }
 
-.cocktail-image{
+.cocktail-image {
     width: 20rem;
 }
 
 
-.info{
+.info {
     width: 100%;
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-  
+
 }
 
-h2{
+h2 {
     margin-bottom: 0.5rem;
 }
 
 
-@media (max-width:40rem){
+@media (max-width:40rem) {
 
-    h1{
+    h1 {
         font-size: 2rem;
     }
-    .drink-container{
+
+    .drink-container {
         width: 20rem;
     }
 
-  .info{
-    flex-direction: column;
-    align-items: center;
-  }
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -5,11 +5,9 @@ import "./Overviewpage.css";
 import AnimatedPage from "../components/AnimatedPage";
 
 import { useState, useEffect } from "react";
-import { Routes, Route, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 export default function Uidpage() {
   const { uid } = useParams();
-
-  console.log(uid);
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -53,7 +51,6 @@ export default function Uidpage() {
       });
   }, []);
 
-
   useEffect(() => {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${uid}`)
       .then((response) => {
@@ -75,25 +72,29 @@ export default function Uidpage() {
 
   return (
     <AnimatedPage>
-    <main>
-        <h1 className="overview-title">Browse all drinks <br/> {uid}</h1>
-      <Navbar/>
-      <div className="cocktail-container">
-      {data &&
-          data.drinks.map(({ idDrink, strDrink, strDrinkThumb}) => (
-           
-            <a href={`id/${idDrink}`}>
-            <div className="center" key={idDrink}>
-              {/* <h3>{strDrink}</h3> */}
-              <img className="cocktail-image-overview" key={idDrink} src={strDrinkThumb} alt={strDrink} />
-              <p>{strDrink}</p>
-            </div>
-            </a>
-           
-          ))}
-           </div>
-      <Footer />
-    </main>
+      <main>
+        <h1 className="overview-title">
+          Browse all drinks <br /> {uid}
+        </h1>
+        <Navbar />
+        <div className="cocktail-container">
+          {data &&
+            data.drinks.map(({ idDrink, strDrink, strDrinkThumb }) => (
+              <a href={`id/${idDrink}`}>
+                <div className="center" key={idDrink}>
+                  <img
+                    className="cocktail-image-overview"
+                    key={idDrink}
+                    src={strDrinkThumb}
+                    alt={strDrink}
+                  />
+                  <p>{strDrink}</p>
+                </div>
+              </a>
+            ))}
+        </div>
+        <Footer />
+      </main>
     </AnimatedPage>
   );
 }

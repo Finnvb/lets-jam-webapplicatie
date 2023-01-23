@@ -1,9 +1,6 @@
 
 footer {
     background-color:#002935;
-    /* height: 15rem; */
-    /* position: absolute; */
-    /* top: 0; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -11,13 +8,10 @@ footer {
 }
 
 .logo {
-    /* width: 10rem; */
-   /* margin-top: 1rem; */
+
 margin-left: 1rem;
 width: 6rem;
 }
-
-
 
 .name{
     display: flex;
@@ -25,7 +19,6 @@ width: 6rem;
     align-items: center;
     margin-right: 1rem;
 }
-
 
 @media (max-width:40rem){
     .logo{

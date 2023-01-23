@@ -1,6 +1,4 @@
 import styles from "./SearchOption.module.css";
-import logo from "../assets/logo.png"
-
 
 function SearchOption(props) {
   return (

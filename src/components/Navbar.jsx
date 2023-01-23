@@ -10,7 +10,6 @@ function Navbar() {
       <img className={styles.logo} src={logo} alt="Cocktail-logo" />
       </a>
  
-
       <button className={styles.button}>Log in</button>
     </nav>
   );

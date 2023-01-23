@@ -1,9 +1,9 @@
-.overview-title{
+.overview-title {
     margin-top: 10rem;
     text-align: center;
 }
 
-.cocktail-container{
+.cocktail-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
     gap: 5rem;
 }
 
-.cocktail-image-overview{
+.cocktail-image-overview {
     width: 15rem;
     height: 100%;
 }
