@@ -9,8 +9,8 @@ import randomizeImg from "../assets/randomize.png";
 import loadingCocktail from "../assets/loading.svg";
 
 import "./Homepage.css";
-import AnimatedPage from "../AnimatedPage";
 
+import AnimatedPage from "../components/AnimatedPage";
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
 import Footer from "../components/Footer";

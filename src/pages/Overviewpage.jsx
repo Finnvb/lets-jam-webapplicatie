@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import "./Overviewpage.css";
-import AnimatedPage from "../AnimatedPage";
+import AnimatedPage from "../components/AnimatedPage";
 
 import { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
