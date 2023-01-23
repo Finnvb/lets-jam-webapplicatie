@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import "./Uid.css";
-
+import AnimatedPage from "../AnimatedPage";
 import { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 export default function Uidpage() {
@@ -34,6 +34,7 @@ export default function Uidpage() {
   }, []);
 
   return (
+    <AnimatedPage>
     <main>
       <div className="nav">
         <Navbar />
@@ -122,5 +123,6 @@ export default function Uidpage() {
         )}
       <Footer />
     </main>
+    </AnimatedPage>
   );
 }

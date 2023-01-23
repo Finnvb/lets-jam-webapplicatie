@@ -1,11 +1,12 @@
-import {BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes, useParams, useLocation  } from "react-router-dom";
 
 import HomePage from "./pages/homepage";
 
 import OverviewPage from "./pages/Overviewpage";
 import UidPage from "./pages/Uid";
-
+import { AnimatePresence } from "framer-motion";
 function App() {
+  const location = useLocation();
   return (
     // <Router>
  <div>
@@ -20,8 +21,8 @@ function App() {
       <HomePage/>
       </Route>
     </Switch> */}
-
-    <Routes>
+  <AnimatePresence exitBeforeEnter>
+    <Routes  key={location.pathname} location={location}>
         <Route path="/" element={<HomePage />} />
         <Route path="/overview" element={<OverviewPage />} />
         <Route path="/overview/:uid" element={<OverviewPage />} />
@@ -32,6 +33,7 @@ function App() {
       
       
       </Routes>
+      </AnimatePresence>
  </div>
 //  </Router>
   );

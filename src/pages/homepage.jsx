@@ -9,7 +9,7 @@ import randomizeImg from "../assets/randomize.png";
 import loadingCocktail from "../assets/loading.svg";
 
 import "./Homepage.css";
-
+import AnimatedPage from "../AnimatedPage";
 
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
@@ -100,6 +100,7 @@ let userValue ='';
 
 
   return (
+   <AnimatedPage>
     <main>
 
 
@@ -232,5 +233,6 @@ let userValue ='';
     
 
     </main>
+    </AnimatedPage>
   );
 }

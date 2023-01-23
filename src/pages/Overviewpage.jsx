@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import "./Overviewpage.css";
+import AnimatedPage from "../AnimatedPage";
 
 import { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
@@ -73,6 +74,7 @@ export default function Uidpage() {
   }, []);
 
   return (
+    <AnimatedPage>
     <main>
         <h1 className="overview-title">Browse all drinks <br/> {uid}</h1>
       <Navbar/>
@@ -92,5 +94,6 @@ export default function Uidpage() {
            </div>
       <Footer />
     </main>
+    </AnimatedPage>
   );
 }
