@@ -132,6 +132,7 @@ export default function Homepage() {
           </div>
 
           <div className="search-container">
+            
             {data1 &&
               data1.drinks.map(({ idDrink, strDrink, strDrinkThumb }) => (
                 <a href={idDrink}>

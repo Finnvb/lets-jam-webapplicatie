@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import emptyStateImg from "../assets/emptyState.svg";
 import "./Overviewpage.css";
 import AnimatedPage from "../components/AnimatedPage";
 
@@ -78,7 +78,7 @@ export default function Uidpage() {
         </h1>
         <Navbar />
         <div className="cocktail-container">
-          {data &&
+          {/* {data &&
             data.drinks.map(({ idDrink, strDrink, strDrinkThumb }) => (
               <a href={`id/${idDrink}`}>
                 <div className="center" key={idDrink}>
@@ -91,8 +91,31 @@ export default function Uidpage() {
                   <p>{strDrink}</p>
                 </div>
               </a>
-            ))}
+            ))} */}
         </div>
+
+        <div className="cocktail-container">
+              {data && data.drinks === null ? (
+                <div className="center">
+                <h1>No cocktails found</h1>
+                
+                <img src={emptyStateImg} alt="Empty State" />
+                </div>
+              ) :  data &&
+                data.drinks.map(({ idDrink, strDrink, strDrinkThumb }) => (
+                  <a href={`id/${idDrink}`}>
+                    <div className="center" key={idDrink}>
+                      <img
+                        className="cocktail-image-overview"
+                        key={idDrink}
+                        src={strDrinkThumb}
+                        alt={strDrink}
+                      />
+                      <p>{strDrink}</p>
+                    </div>
+                  </a>
+                ))}  
+                 </div>
         <Footer />
       </main>
     </AnimatedPage>
