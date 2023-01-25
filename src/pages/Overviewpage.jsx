@@ -78,20 +78,7 @@ export default function Uidpage() {
         </h1>
         <Navbar />
         <div className="cocktail-container">
-          {/* {data &&
-            data.drinks.map(({ idDrink, strDrink, strDrinkThumb }) => (
-              <a href={`id/${idDrink}`}>
-                <div className="center" key={idDrink}>
-                  <img
-                    className="cocktail-image-overview"
-                    key={idDrink}
-                    src={strDrinkThumb}
-                    alt={strDrink}
-                  />
-                  <p>{strDrink}</p>
-                </div>
-              </a>
-            ))} */}
+
         </div>
 
         <div className="cocktail-container">
