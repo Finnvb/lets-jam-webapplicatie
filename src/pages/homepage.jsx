@@ -100,6 +100,8 @@ export default function Homepage() {
           Find out how to make your favorite cocktails!
         </h1>
 
+        <p className="intro">Cocktails are a delicious and sophisticated way to enjoy a variety of flavors and ingredients. They can range from simple concoctions of just a few ingredients, to more complex and layered drinks that require a bit more skill to prepare. Some popular cocktail categories include martinis, Margaritas, Manhattans, Old Fashioned, Daiquiri, and many more. The ingredients used in cocktails can include a variety of spirits, liqueurs, mixers, and fresh fruits, herbs, and spices. Whether you're looking to impress guests at a party or simply want to try something new and exciting, there's a cocktail out there for everyone to enjoy. With the right ingredients and techniques, you can create a truly memorable drink that will delight your senses.</p>
+
         <div className="searchOptions">
           <SearchOption
             link="#name"
@@ -125,9 +127,9 @@ export default function Homepage() {
 
         <Section id="name" title="Search by name">
           <div className="searchbar">
-            <input type="text" placeholder="Search" onChange={getInputValue} />
+            <input type="text" placeholder="martini" onChange={getInputValue} />
             <button className="button" onClick={clickSearchButton}>
-              Search
+            <img className="searchIcon" src={search} alt="Search" />
             </button>
           </div>
 
